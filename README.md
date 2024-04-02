@@ -28,4 +28,22 @@ There are some steps to create 3 broker using command line .
 
 
 There are some steps to start kafaka by docker :
-TBC
+
+# 启动
+docker compose up -d
+
+#create top
+docker exec -it kafka-0 /opt/bitnami/kafka/bin/kafka-topics.sh \
+--create --bootstrap-server kafka-0:9092 \
+--topic my-topic \
+--partitions 3 --replication-factor 2
+
+#create producer then input your message 
+docker exec -it kafka-0 /opt/bitnami/kafka/bin/kafka-console-producer.sh \
+--bootstrap-server kafka-0:9092 \
+--topic my-topic
+
+#create consumer
+docker exec -it kafka-0 /opt/bitnami/kafka/bin/kafka-console-consumer.sh \
+--bootstrap-server kafka-0:9092 \
+--topic my-topic
