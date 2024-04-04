@@ -29,6 +29,7 @@ There are some steps to create 3 broker using command line .
 
 There are some steps to start kafaka by docker :
 
+cd docker-compose/docker-compose-cluster.yml
 docker compose up -d
 
 #create top
