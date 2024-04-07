@@ -1,5 +1,6 @@
 
 # Springboot Kafka
+# Apache Kafka is message platfrom.The server as producer sends the message to frontend as consumer. This is why we can receive withdraw message after we use the ATM. 
 
 There are some steps to create 3 broker using command line .
 1. dowload latest kafka tar (The project version is using kafaka_2.11-1.0.0) 
